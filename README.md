@@ -8,7 +8,7 @@ https://git.generalassemb.ly/bergkma/skip-chinese.git
 
 The SKIP Chinese Dictionary is a Chinese radical dictionary where users can lookup characters by radical. In applying the SKIP method used for some Japanese character dictionaries to the Kanxi radical system, the user can not only find by radical, but can select if the radical appears in left-right, top-bottom, enclosed, or full-character configurations, ensuring an efficient lookup experience. 
 
-## The SKIP method and credits
+## The SKIP Method and Credits
 The SKIP method was developed by linguistic rock star Jack Halpern for the Kani Dictionary Publishing Society. It appears here in compliance with the conditions of use. More information can be found ![here](http://www.kanji.org/kanji/dictionaries/skip_permission.htm).
 
 ## API and Data Sample
