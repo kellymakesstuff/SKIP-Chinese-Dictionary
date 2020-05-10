@@ -78,18 +78,14 @@ The Chinese Character Web API is an API built from the [Unihan Database](http://
 
 #### MVP
 
--
--
--
-
+- Present user with selection of character configuration: left-right, top-bottom, enclure, solid
+- Present user with radicals that fit their configuration category, where user will select radical stroke count
+- Present user with characters that meet the configuration category, radical stroke count, and total stroke count
 
 
 #### PostMVP
 
--
--
--
-
+- Allow user to click on a character and view its information (pronunciation, stroke number, on/kun readings, and associated information)
 
 
 ## Project Schedule
