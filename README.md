@@ -8,11 +8,14 @@ https://git.generalassemb.ly/bergkma/skip-chinese.git
 
 The SKIP Chinese Dictionary is a Chinese radical dictionary where users can lookup characters by radical. In applying the SKIP method used for some Japanese character dictionaries to the Kanxi radical system, the user can not only find by radical, but can select if the radical appears in left-right, top-bottom, enclosed, or full-character configurations, ensuring an efficient lookup experience. 
 
+## The SKIP method and credits
+The SKIP method was developed by linguistic rock star Jack Halpern for the Kani Dictionary Publishing Society. It appears here in compliance with the conditions of use. More information can be found ![here](http://www.kanji.org/kanji/dictionaries/skip_permission.htm).
+
 ## API and Data Sample
 
-[Chinese Character Web API](http://ccdb.hemiola.com/)
+![Chinese Character Web API](http://ccdb.hemiola.com/)
 
-The Chinese Character Web API is an API built from the Unihan Database, which is the comprehensive database of Chinese, Japanese, Korean, Vietnamese language information and character set as put out by the Unicode Consortium. 
+The Chinese Character Web API is an API built from the [Unihan Database](http://www.unicode.org/reports/tr38/#N10260), which is the comprehensive database of Chinese, Japanese, Korean, and Vietnamese language information and character sets as put out by the Unicode Consortium. 
 
 ### API Data Sample
 
