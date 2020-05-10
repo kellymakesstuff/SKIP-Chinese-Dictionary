@@ -67,7 +67,7 @@ The Chinese Character Web API is an API built from the Unihan Database, which is
 ```
 
 ## Wireframes
-![Wireframe](.jpg)
+![Wireframe](https://i.imgur.com/mFgAHez.png)
 
 
 ### MVP/PostMVP
