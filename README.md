@@ -101,18 +101,18 @@ The Chinese Character Web API is an API built from the [Unihan Database](http://
 
 ## Priority Matrix
 
-![Priority Matrix](.jpg)
+![Priority Matrix](https://i.imgur.com/CgQCmTp.jpg)
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Pseudocode and planning | H | 3 hours | |
-| Splitting radicals by category | H | 3 hours | |
-| HTML Structure | M | 2hrs |  |  |
-| CSS Structure | M | 3hrs |  |  |
-| JS Main Structure (Planning API endpoints in JS) | H | 5hrs |  |  |
-| Adding DOM to JS | H | 5hrs |  |  |
-| CSS Flexbox fine-tuning | H | 3hrs |  |  |
-| General cleanup and unexpected tasks | L | 7hrs |  |  |
+| 1. Pseudocode and planning | H | 3 hours | |
+| 2. Splitting radicals by category | H | 3 hours | |
+| 3. HTML Structure | M | 2hrs |  |  |
+| 4. CSS Structure | M | 3hrs |  |  |
+| 5. JS Main Structure (Planning API endpoints in JS) | H | 5hrs |  |  |
+| 5. Adding DOM to JS | H | 5hrs |  |  |
+| 6. CSS Flexbox fine-tuning | H | 3hrs |  |  |
+| 7. General cleanup and unexpected tasks | L | 7hrs |  |  |
 |  |   | 31hrs |  |   |
