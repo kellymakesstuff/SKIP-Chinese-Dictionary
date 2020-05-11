@@ -1,3 +1,5 @@
+![Banner](https://i.imgur.com/JfM2LL1.jpg)
+
 # Project Overview
 
 ## SKIP Chinese Dictionary
