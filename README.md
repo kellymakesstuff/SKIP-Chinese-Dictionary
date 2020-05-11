@@ -92,10 +92,10 @@ The Chinese Character Web API is an API built from the [Unihan Database](http://
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Monday, 5/11| Project approval. Pseudocode, core HTML and CSS. | Incomplete
-|Tuesday, 5/12| API code, retrieving and filtering of information,  | Incomplete
-|Wednesday, 5/13|  | Incomplete
-|Thursday, 5/14| | Incomplete
+|Monday, 5/11| Pseudocode, core HTML, splitting radicals into categories | Incomplete
+|Tuesday, 5/12| Js main structure, CSS flexbox structure, getting information from API | Incomplete
+|Wednesday, 5/13| DOM added to JS for selection options | Incomplete
+|Thursday, 5/14| General cleanup | Incomplete
 |Friday, 5/15| Present | Incomplete
 
 
@@ -107,12 +107,12 @@ The Chinese Character Web API is an API built from the [Unihan Database](http://
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML Structure | M | 1hr |  |  |
-| CSS Styling | M | 2hrs |  |  |
-|  | H | 2hrs |  |  |
-|  | H | 5hrs |  |  |
-|  | H | 5hrs |  |  |
-| | H | 8hrs |  |  |
-|  | H | 5hrs |  |  |
-|  | L | 5hrs |  |  |
-|  |   | 33hrs |  |   |
+| Pseudocode and planning | H | 3 hours | |
+| Splitting radicals by category | H | 3 hours | |
+| HTML Structure | M | 2hrs |  |  |
+| CSS Structure | M | 3hrs |  |  |
+| JS Main Structure (Planning API endpoints in JS) | H | 5hrs |  |  |
+| Adding DOM to JS | H | 5hrs |  |  |
+| CSS Flexbox fine-tuning | H | 3hrs |  |  |
+| General cleanup and unexpected tasks | L | 7hrs |  |  |
+|  |   | 31hrs |  |   |
