@@ -101,11 +101,9 @@ The Chinese Character Web API is an API built from the [Unihan Database](http://
 |Friday, 5/15| Present | Incomplete
 
 
-## Priority Matrix
+## Priority Matrix and Timeframes
 
 ![Priority Matrix](https://i.imgur.com/CgQCmTp.jpg)
-
-## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
