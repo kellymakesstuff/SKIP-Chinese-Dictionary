@@ -4,22 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
   <title>SKIP Chinese Dictionary</title>
 </head>
 
 <body>
+
+
+
+  <button id="myBtn">Character Configuration</button>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Where is the radical?</p>
+      <table style="width:100%">
+        <tr>
+          <th><img id=leftrightimg src="./images/leftright.jpg" alt="Left to Right"></th>
+          <th><img id=topbottomimg src="./images/topbottom.jpg" alt="Top to Bottom"></th>
+          <th><img id=enclosedimg src="./images/enclosed.jpg" alt="Enclosure"></th>
+          <th><img id=solidimg src="./images/solid.jpg" alt="Solid"></th>
+          <th><img id=notsureimg src="./images/notsure.jpg" alt="I'm not sure"></th>
+        </tr>
+        <tr>
+          <th><label for="leftrightimg">Left to Right</label></th>
+          <th><label for="topbottomimg">Top to Bottom</label></th>
+          <th><label for="enclosedimg">Enclosure</label></th>
+          <th><label id="solidimg">Solid</label></th>
+          <th><label for="notsureimg">I'm not sure</label></th>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
   <h2>Left Right </h2>
-  <form>
+  <form id="left-right-radical-form">
     <select name="left-right-radical" id="left-right-radical-select"></select>
     <button>submit</button>
   </form>
   <h2>Top Bottom </h2>
-  <form>
+  <form id="top-bottom-radical-form">
     <select name="top-bottom-radical" id="top-bottom-radical-select"></select>
     <button>submit</button>
   </form>
   <h2>Enclosed</h2>
-  <form>
+  <form id="enclosed-radical-form">
     <select name="enclosed-radical" id="enclosed-radical-select"></select>
     <button>submit</button>
   </form>
