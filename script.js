@@ -41,7 +41,7 @@ let leftRightMenu = async () => {
 
   let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
-  let select = document.querySelector("#left-right-radical-select")
+  let select = document.querySelector(".left-right-radical-select")
 
   try {
     let response = await axios.get(url)
@@ -51,12 +51,65 @@ let leftRightMenu = async () => {
       leftRightList.push(response.data[leftRight[i]].string)
       // console.log(leftRightList)
       let option = document.createElement('option')
-      option.value = `${leftRight[i]}`
+      option.value = `${leftRight[i + 1]}`
       option.text = `${response.data[leftRight[i]].string}`
       select.append(option)
 
 
     }
+
+  } catch (error) {
+    console.log(`${error}`)
+  } finally {
+
+  }
+  let selectForm = document.querySelector(".left-right-radical-select")
+  selectForm.addEventListener("change", optionValue)
+
+
+  function optionValue(e) {
+    e.preventDefault()
+    let getValue = selectForm.value
+    console.log(getValue)
+    //*****(call new async radical function and pass through getValue)
+    radicalPass(getValue)
+  }
+
+  // addChars(selectForm.value)
+}
+
+///e.target event listener - look up with multiple inputs 
+
+
+
+
+leftRightMenu();
+
+let radicalPass = async (radicalnum) => {
+  let url = `http://ccdb.hemiola.com/characters/radicals/${radicalnum}?&fields=string,ktotalstrokes&filters=simplified`
+
+  try {
+    let response = await axios.get(url)
+
+    function addChars() {
+      for (i = 0; i < response.data.length; i++) {
+        let singleChar = document.createElement('p')
+        singleChar.innerText = response.data[i].string
+        document.querySelector('#character-population').append(singleChar)
+
+      }
+    }
+
+    function removeChars() {
+      let oldChar = document.querySelector("#character-population")
+      console.log('last child', oldChar.lastChild)
+      while (oldChar.lastChild) {
+        oldChar.removeChild(oldChar.lastChild)
+      }
+    }
+
+    addChars()
+    // removeChars()
 
 
   } catch (error) {
@@ -64,30 +117,14 @@ let leftRightMenu = async () => {
   } finally {
 
   }
-  let selectForm = document.querySelector("#left-right-radical-select")
-  selectForm.addEventListener("submit", optionValue)
-
-
-  function optionValue(e) {
-    e.preventDefault()
-
-    let getValue = selectForm.value
-    console.log(getValue)
-
-  }
-
 }
-
-///e.target event listener - look up with multiple inputs 
-
-leftRightMenu();
 
 let topBottomMenu = async () => {
   // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
   let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
-  let select = document.querySelector("#top-bottom-radical-select")
+  let select = document.querySelector(".top-bottom-radical-select")
 
   try {
     let response = await axios.get(url)
@@ -111,14 +148,14 @@ let topBottomMenu = async () => {
 
 }
 
-topBottomMenu();
+// topBottomMenu();
 
 let enclosedMenu = async () => {
   // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
   let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
-  let select = document.querySelector("#enclosed-radical-select")
+  let select = document.querySelector(".enclosed-radical-select")
 
   try {
     let response = await axios.get(url)
@@ -141,7 +178,7 @@ let enclosedMenu = async () => {
 
 }
 
-enclosedMenu();
+// enclosedMenu();
 
 
 

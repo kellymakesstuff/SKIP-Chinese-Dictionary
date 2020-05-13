@@ -1,7 +1,31 @@
 body {
   font-family: 'Noto Sans SC', sans-serif;
 }
- 
+
+#character-population {
+  margin: 0 auto;
+max-width: 60%;
+max-height: 40%;
+  display: flex;
+flex-flow: wrap;
+justify-content: space-between;
+
+
+}
+
+p {
+font-size: 40px;
+border-style: solid;
+border-width: 2px;
+padding-left: 14px;
+padding-right: 14px;
+padding-top: 4px;
+padding-bottom: 4px;
+border-color: blue;
+background-color: lightcyan;
+border-radius: 10px;
+
+}
  
  .modal {
   display: block; 
