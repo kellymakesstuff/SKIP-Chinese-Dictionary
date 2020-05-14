@@ -30,7 +30,7 @@ leftRightImg.onclick = function () {
   leftRightDiv.style.display = "block";
   topBottomDiv.style.display = "none";
   enclosedDiv.style.display = "none";
-  
+
 }
 
 topBottomImg.onclick = function () {
@@ -39,7 +39,7 @@ topBottomImg.onclick = function () {
   topBottomDiv.style.display = "block";
   leftRightDiv.style.display = "none";
   enclosedDiv.style.display = "none";
- 
+
 }
 
 enclosedImg.onclick = function () {
@@ -48,7 +48,7 @@ enclosedImg.onclick = function () {
   enclosedDiv.style.display = "block";
   leftRightDiv.style.display = "none";
   topBottomDiv.style.display = "none";
- 
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -80,9 +80,9 @@ let topBottomList = [];
 let enclosedList = [];
 
 let leftRightMenu = async () => {
-  // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
+  // let url = "https://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
-  let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
+  let url = `https://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
   let select = document.querySelector(".left-right-radical-select")
 
@@ -118,14 +118,14 @@ let leftRightMenu = async () => {
     radicalPass(getValue)
   }
 
- 
+
 }
 
 
 let topBottomMenu = async () => {
-  // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
+  // let url = "https://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
-  let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
+  let url = `https://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
   let select = document.querySelector(".top-bottom-radical-select")
 
@@ -137,23 +137,23 @@ let topBottomMenu = async () => {
       topBottomList.push(response.data[topBottom[i]].string)
       // console.log(topBottomList)
       let option = document.createElement('option')
-      option.value = `${topBottom[i+1]}`
+      option.value = `${topBottom[i + 1]}`
       option.text = `${response.data[topBottom[i]].string}`
       select.append(option)
 
     }
 
     let selectForm = document.querySelector(".top-bottom-radical-select")
-  selectForm.addEventListener("change", optionValue)
+    selectForm.addEventListener("change", optionValue)
 
 
-  function optionValue(e) {
-    e.preventDefault()
-    let getValue = selectForm.value
-    console.log(getValue)
-    //*****(call new async radical function and pass through getValue)
-    radicalPass(getValue)
-  }
+    function optionValue(e) {
+      e.preventDefault()
+      let getValue = selectForm.value
+      console.log(getValue)
+      //*****(call new async radical function and pass through getValue)
+      radicalPass(getValue)
+    }
   } catch (error) {
     console.log(`${error}`)
   } finally {
@@ -164,9 +164,9 @@ let topBottomMenu = async () => {
 
 
 let enclosedMenu = async () => {
-  // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
+  // let url = "https://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
-  let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
+  let url = `https://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
   let select = document.querySelector(".enclosed-radical-select")
 
@@ -176,7 +176,7 @@ let enclosedMenu = async () => {
     for (i = 0; i < enclosed.length; i++) {
       enclosedList.push(response.data[enclosed[i]].string)
       let option = document.createElement('option')
-      option.value = `${enclosed[i+1]}`
+      option.value = `${enclosed[i + 1]}`
       option.text = `${response.data[enclosed[i]].string}`
       select.append(option)
       // console.log(enclosedList)
@@ -184,16 +184,16 @@ let enclosedMenu = async () => {
     }
 
     let selectForm = document.querySelector(".enclosed-radical-select")
-  selectForm.addEventListener("change", optionValue)
+    selectForm.addEventListener("change", optionValue)
 
 
-  function optionValue(e) {
-    e.preventDefault()
-    let getValue = selectForm.value
-    console.log(getValue)
-    //*****(call new async radical function and pass through getValue)
-    radicalPass(getValue)
-  }
+    function optionValue(e) {
+      e.preventDefault()
+      let getValue = selectForm.value
+      console.log(getValue)
+      //*****(call new async radical function and pass through getValue)
+      radicalPass(getValue)
+    }
 
   } catch (error) {
     console.log(`${error}`)
@@ -205,12 +205,12 @@ let enclosedMenu = async () => {
 
 
 let radicalPass = async (radicalnum) => {
-  
-  let url = `http://ccdb.hemiola.com/characters/radicals/${radicalnum}?&fields=string,ktotalstrokes,kmandarin,kdefinition&filters=simplified`
+
+  let url = `https://ccdb.hemiola.com/characters/radicals/${radicalnum}?&fields=string,ktotalstrokes,kmandarin,kdefinition&filters=simplified`
 
   try {
     let response = await axios.get(url)
-console.log(response.data)
+    console.log(response.data)
     function addChars() {
       for (i = 0; i < response.data.length; i++) {
         let singleChar = document.createElement('p')
@@ -222,8 +222,8 @@ console.log(response.data)
 
 
     addChars()
-  
-  
+
+
 
 
   } catch (error) {
