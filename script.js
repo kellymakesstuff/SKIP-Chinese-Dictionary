@@ -80,9 +80,9 @@ let topBottomList = [];
 let enclosedList = [];
 
 let leftRightMenu = async () => {
-  // let url = "https://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
+  // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
-  let url = `https://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
+  let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
   let select = document.querySelector(".left-right-radical-select")
 
@@ -123,9 +123,9 @@ let leftRightMenu = async () => {
 
 
 let topBottomMenu = async () => {
-  // let url = "https://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
+  // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
-  let url = `https://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
+  let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
   let select = document.querySelector(".top-bottom-radical-select")
 
@@ -164,9 +164,9 @@ let topBottomMenu = async () => {
 
 
 let enclosedMenu = async () => {
-  // let url = "https://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
+  // let url = "http://ccdb.hemiola.com/characters?&fields=string,ktotalstrokes&filters=simplified&big5a"
 
-  let url = `https://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
+  let url = `http://ccdb.hemiola.com/characters/radicals/singles/?&fields=string,ktotalstrokes&filters=simplified`
 
   let select = document.querySelector(".enclosed-radical-select")
 
@@ -206,7 +206,7 @@ let enclosedMenu = async () => {
 
 let radicalPass = async (radicalnum) => {
 
-  let url = `https://ccdb.hemiola.com/characters/radicals/${radicalnum}?&fields=string,ktotalstrokes,kmandarin,kdefinition&filters=simplified`
+  let url = `http://ccdb.hemiola.com/characters/radicals/${radicalnum}?&fields=string,ktotalstrokes,kmandarin,kdefinition&filters=simplified`
 
   try {
     let response = await axios.get(url)
