@@ -37,17 +37,50 @@
 
   </div>
 
-  <div id="left-right-div"><h2>Left Right</h2>
-  <select name="left-right-radical" class="left-right-radical-select"></select>
-</div>
-  
-  <div id="top-bottom-div"><h2>Top Bottom</h2>
-    <select name="top-bottom-radical" class="top-bottom-radical-select"></select>
+  <div id="StrokeBtnContainer">
+    <button class="stroke-btn active" onclick="filterStrokes('all')"> Show all</button>
+    <button class="stroke-btn" onclick="filterStrokes('1')">1</button>
+    <button class="stroke-btn" onclick="filterStrokes('2')">2</button>
+    <button class="stroke-btn" onclick="filterStrokes('3')">3</button>
+    <button class="stroke-btn" onclick="filterStrokes('4')">4</button>
+    <button class="stroke-btn" onclick="filterStrokes('5')">5</button>
+    <button class="stroke-btn" onclick="filterStrokes('6')">6</button>
+    <button class="stroke-btn" onclick="filterStrokes('7')">7</button>
+    <button class="stroke-btn" onclick="filterStrokes('8')">8</button>
+    <button class="stroke-btn" onclick="filterStrokes('9')">9</button>
+    <button class="stroke-btn" onclick="filterStrokes('10')">10</button>
+    <button class="stroke-btn" onclick="filterStrokes('11')">11</button>
+    <button class="stroke-btn" onclick="filterStrokes('12')">12</button>
+
   </div>
 
-  <div id="enclosed-div"><h2>Enclosed</h2>
-    <select name="enclosed-radical" class="enclosed-radical-select"></select>
+  <div id="left-right-div">
+    <h2>Left Right</h2>
+    <select id="left-right-radical" class="left-right-radical-select"></select>
+    <h2>Stroke Count (total)</h2>
+    <!-- <select id="left-right-strokes" class="left-right-radical-select"></select> -->
   </div>
+
+  <div id="top-bottom-div">
+    <h2>Top Bottom</h2>
+    <select id="top-bottom-radical" class="top-bottom-radical-select"></select>
+    <h2>Stroke Count (total)</h2>
+    <!-- <select id="top-bottom-strokes" class="top-bottom-radical-select"></select> -->
+  </div>
+
+  <div id="enclosed-div">
+    <h2>Enclosed</h2>
+    <select id="enclosed-radical" class="enclosed-radical-select"></select>
+    <h2>Stroke Count (total)</h2>
+    <!-- <select id="enclosed-strokes" class="enclosed-radical-select"></select> -->
+  </div>
+
+  <!-- <div id="solid-div">
+    <h2>Solid Character</h2>
+    <select id="solid-radical" class="solid-select"></select>
+    <h2>Stroke Count (total)</h2>
+    <!-- <select id="enclosed-strokes" class="enclosed-radical-select"></select> -->
+  </div> -->
 
   <div id="character-info"></div>
   <div id="character-population"></div>

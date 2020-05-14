@@ -78,3 +78,39 @@ border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
 } 
+
+
+/* stroke buttons */
+.StrokeBtnContainer {
+  overflow: hidden;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.stroke-btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.stroke-btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.stroke-btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.listed-char {
+  display: block;
+}
