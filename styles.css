@@ -1,3 +1,9 @@
+#menu {
+  display: flex;
+  flex-flow: wrap;
+}
+
+
 body {
   font-family: 'Noto Sans SC', sans-serif;
 }
@@ -114,3 +120,17 @@ border-radius: 10px;
 .listed-char {
   display: block;
 }
+
+.listed-char:hover {
+  font-size: 40px;
+border-style: dotted;
+border-width: 2px;
+padding-left: 14px;
+padding-right: 14px;
+padding-top: 4px;
+padding-bottom: 4px;
+border-color: blue;
+background-color: cornsilk;
+border-radius: 10px;
+}
+

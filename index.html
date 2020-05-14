@@ -10,69 +10,72 @@
 </head>
 
 <body>
+  <div id=menu>
+    <button id="myBtn">Character Configuration</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Where is the radical?</p>
+        <table style="width:100%">
+          <tr>
+            <th><img id=leftrightimg src="./images/leftright.jpg" alt="Left to Right"></th>
+            <th><img id=topbottomimg src="./images/topbottom.jpg" alt="Top to Bottom"></th>
+            <th><img id=enclosedimg src="./images/enclosed.jpg" alt="Enclosure"></th>
+            <th><img id=solidimg src="./images/solid.jpg" alt="Solid"></th>
+            <th><img id=notsureimg src="./images/notsure.jpg" alt="I'm not sure"></th>
+          </tr>
+          <tr>
+            <th><label for="leftrightimg">Left to Right</label></th>
+            <th><label for="topbottomimg">Top to Bottom</label></th>
+            <th><label for="enclosedimg">Enclosure</label></th>
+            <th><label id="solidimg">Solid</label></th>
+            <th><label for="notsureimg">I'm not sure</label></th>
+          </tr>
+        </table>
 
-  <button id="myBtn">Character Configuration</button>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Where is the radical?</p>
-      <table style="width:100%">
-        <tr>
-          <th><img id=leftrightimg src="./images/leftright.jpg" alt="Left to Right"></th>
-          <th><img id=topbottomimg src="./images/topbottom.jpg" alt="Top to Bottom"></th>
-          <th><img id=enclosedimg src="./images/enclosed.jpg" alt="Enclosure"></th>
-          <th><img id=solidimg src="./images/solid.jpg" alt="Solid"></th>
-          <th><img id=notsureimg src="./images/notsure.jpg" alt="I'm not sure"></th>
-        </tr>
-        <tr>
-          <th><label for="leftrightimg">Left to Right</label></th>
-          <th><label for="topbottomimg">Top to Bottom</label></th>
-          <th><label for="enclosedimg">Enclosure</label></th>
-          <th><label id="solidimg">Solid</label></th>
-          <th><label for="notsureimg">I'm not sure</label></th>
-        </tr>
-      </table>
+      </div>
 
     </div>
 
-  </div>
 
-  <div id="StrokeBtnContainer">
-    <button class="stroke-btn active" onclick="filterStrokes('all')"> Show all</button>
-    <button class="stroke-btn" onclick="filterStrokes('1')">1</button>
-    <button class="stroke-btn" onclick="filterStrokes('2')">2</button>
-    <button class="stroke-btn" onclick="filterStrokes('3')">3</button>
-    <button class="stroke-btn" onclick="filterStrokes('4')">4</button>
-    <button class="stroke-btn" onclick="filterStrokes('5')">5</button>
-    <button class="stroke-btn" onclick="filterStrokes('6')">6</button>
-    <button class="stroke-btn" onclick="filterStrokes('7')">7</button>
-    <button class="stroke-btn" onclick="filterStrokes('8')">8</button>
-    <button class="stroke-btn" onclick="filterStrokes('9')">9</button>
-    <button class="stroke-btn" onclick="filterStrokes('10')">10</button>
-    <button class="stroke-btn" onclick="filterStrokes('11')">11</button>
-    <button class="stroke-btn" onclick="filterStrokes('12')">12</button>
 
-  </div>
+    <div id="left-right-div">
+      <h2>Left Right</h2>
+      <select id="left-right-radical" class="left-right-radical-select"></select>
+      <h2>Stroke Count (total)</h2>
+      <!-- <select id="left-right-strokes" class="left-right-radical-select"></select> -->
+    </div>
 
-  <div id="left-right-div">
-    <h2>Left Right</h2>
-    <select id="left-right-radical" class="left-right-radical-select"></select>
-    <h2>Stroke Count (total)</h2>
-    <!-- <select id="left-right-strokes" class="left-right-radical-select"></select> -->
-  </div>
+    <div id="top-bottom-div">
+      <h2>Top Bottom</h2>
+      <select id="top-bottom-radical" class="top-bottom-radical-select"></select>
+      <h2>Stroke Count (total)</h2>
+      <!-- <select id="top-bottom-strokes" class="top-bottom-radical-select"></select> -->
+    </div>
 
-  <div id="top-bottom-div">
-    <h2>Top Bottom</h2>
-    <select id="top-bottom-radical" class="top-bottom-radical-select"></select>
-    <h2>Stroke Count (total)</h2>
-    <!-- <select id="top-bottom-strokes" class="top-bottom-radical-select"></select> -->
-  </div>
+    <div id="enclosed-div">
+      <h2>Enclosed</h2>
+      <select id="enclosed-radical" class="enclosed-radical-select"></select>
+      <h2>Stroke Count (total)</h2>
+      <!-- <select id="enclosed-strokes" class="enclosed-radical-select"></select> -->
+    </div>
 
-  <div id="enclosed-div">
-    <h2>Enclosed</h2>
-    <select id="enclosed-radical" class="enclosed-radical-select"></select>
-    <h2>Stroke Count (total)</h2>
-    <!-- <select id="enclosed-strokes" class="enclosed-radical-select"></select> -->
+    <div id="StrokeBtnContainer">
+      <button class="stroke-btn active" "> Show all</button>
+    <button class=" stroke-btn">1</button>
+      <button class="stroke-btn">2</button>
+      <button class="stroke-btn">3</button>
+      <button class="stroke-btn">4</button>
+      <button class="stroke-btn">5</button>
+      <button class="stroke-btn">6</button>
+      <button class="stroke-btn">7</button>
+      <button class="stroke-btn">8</button>
+      <button class="stroke-btn">9</button>
+      <button class="stroke-btn">10</button>
+      <button class="stroke-btn">11</button>
+      <button class="stroke-btn">12</button>
+
+    </div>
   </div>
 
   <!-- <div id="solid-div">
@@ -80,7 +83,7 @@
     <select id="solid-radical" class="solid-select"></select>
     <h2>Stroke Count (total)</h2>
     <!-- <select id="enclosed-strokes" class="enclosed-radical-select"></select> -->
-  </div> -->
+  </div>
 
   <div id="character-info"></div>
   <div id="character-population"></div>

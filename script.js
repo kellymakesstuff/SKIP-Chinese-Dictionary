@@ -78,6 +78,7 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 function filterRadStrokes(btnStroke) {
+  document.querySelector('#character-population').innerHTML = " "
   console.log(currentRadicalNum)
   for (character in currentRadicalNum.data) {
     console.log("line 83", character, currentRadicalNum.data[character])
@@ -87,10 +88,36 @@ function filterRadStrokes(btnStroke) {
       singleChar.innerText = currentRadicalNum.data[character].string
       singleChar.classList = currentRadicalNum.data[character].ktotalstrokes
       singleChar.classList += " listed-char"
-      document.querySelector('#character-population').innerHTML = " "
       document.querySelector('#character-population').append(singleChar)
       console.log(singleChar.classList)
+
+      singleChar.addEventListener("click", () => {
+        console.log(singleChar.innerText)
+        let charInfo = document.querySelector('#character-info')
+        charInfo.innerHTML = " "
+        let charName = document.createElement('p')
+        charName.innerText = currentRadicalNum.data[character].string
+        charInfo.append(charName)
+        console.log(currentRadicalNum.data[character].string, "currentRadicalNum.data[character].string")
+        console.log(charName, "charName")
+        let charMand = document.createElement('p')
+        charMand.innerText = currentRadicalNum.data[character].kmandarin
+        charInfo.append(charMand)
+        console.log("currentRadicalNum.data[character].kmandarin", currentRadicalNum.data[character].kmandarin)
+        let charEng = document.createElement('p')
+        charEng.innerText = currentRadicalNum.data[character].kdefinition
+        charInfo.append(charEng)
+        console.log("currentRadicalNum.data[character].kdefinition", currentRadicalNum.data[character].kdefinition)
+        console.log(currentRadicalNum.data[character].kdefinition)
+
+      })
+
+
+
     }
+    // } else {
+    //   document.querySelector('#character-population').innerHTML = " "
+    // }
 
 
 
@@ -98,26 +125,11 @@ function filterRadStrokes(btnStroke) {
 }
 
 
-// function filterStrokes(number) {
-//   let charClass = document.getElementsByClassName("listed-char")
-//   let current = document.getElementsByClassName("active");
-//   for (let i = 0; i < charClass.length; i++) {
-//     if (charClass[i].classList.contains(number)) {
-//       charClass.style.display = "block";
-//       // console.log(charClass.style.display)
-//     } else {
-//       charClass.style.display = "none";
-//       // console.log(charClass.style.display)
-//     }
-//   };
-// }
-
-
-
-
 ////////
 
 
+
+let currentRadicalNum = { radicalNum: 0, data: [] }
 
 
 let leftRight = [1, 3, 4, 5, 8, 14, 15, 17, 18, 20, 23, 24, 25, 27, 28, 29, 31, 32, 35, 37, 38, 40, 45, 46, 47, 48, 49]
@@ -252,21 +264,6 @@ let enclosedMenu = async () => {
 
 }
 
-
-
-// let strokeBtn = document.querySelectorAll(".stroke-btn")
-// strokeBtn.addEventListener("click", filterStrokes)
-
-// function filterStrokes(number) {
-//   if (document.getElementsByClassName(`${number}`) === `${number}`) {
-//     document.querySelectorAll(`${number}`).style.display = block
-//   } else {
-//     document.getElementById('p').style.display = none
-
-//   }
-
-// }
-let currentRadicalNum = { radicalNum: 0, data: [] }
 
 
 let radicalPass = async (chosenRad) => {
