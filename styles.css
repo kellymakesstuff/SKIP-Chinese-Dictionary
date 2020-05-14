@@ -2,6 +2,11 @@ body {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
+img {
+  position: fixed center;
+  width: 80%;
+}
+
 #character-population {
   margin: 0 auto;
 max-width: 60%;
@@ -9,10 +14,20 @@ max-height: 40%;
   display: flex;
 flex-flow: wrap;
 justify-content: space-between;
-
-
 }
 
+#left-right-div {
+display: none;
+}
+
+#top-bottom-div {
+display: none;
+}
+
+#enclosed-div {
+display: none;
+}
+  
 p {
 font-size: 40px;
 border-style: solid;
