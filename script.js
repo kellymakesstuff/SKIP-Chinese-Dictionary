@@ -1,11 +1,14 @@
 // Get the modal
-var modal = document.getElementById("myModal");
+let configurationMenu = document.getElementById("configuration-menu");
+let radicalMenu = document.getElementById("radical-menu");
+let strokeMenu = document.getElementById("stroke-menu");
+let aboutMenu = document.getElementById("about-menu");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let configMenuBtn = document.getElementById("configuration-menu-button");
+let radicalMenuBtn = document.getElementById("radical-menu-button");
+let strokeMenuBtn = document.getElementById("stroke-menu-button");
+let aboutMenuBtn = document.getElementById("about-menu-button");
 
 let leftRightImg = document.getElementById("leftrightimg")
 let leftRightDiv = document.getElementById("left-right-div")
@@ -17,17 +20,23 @@ let solidImg = document.getElementById("solidimg")
 let solidDiv = document.getElementById("solid-div")
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
+configMenuBtn.onclick = function () {
+  configurationMenu.style.display = "block";
+}
+radicalMenuBtn.onclick = function () {
+  radicalMenu.style.display = "block";
+}
+strokeMenuBtn.onclick = function () {
+  strokeMenu.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
+aboutMenuBtn.onclick = function () {
+  aboutMenu.style.display = "block";
 }
+
 
 leftRightImg.onclick = function () {
-  modal.style.display = "none";
+  configurationMenu.style.display = "none";
   leftRightMenu();
   leftRightDiv.style.display = "block";
   topBottomDiv.style.display = "none";
@@ -36,7 +45,7 @@ leftRightImg.onclick = function () {
 }
 
 topBottomImg.onclick = function () {
-  modal.style.display = "none";
+  configurationMenu.style.display = "none";
   topBottomMenu();
   topBottomDiv.style.display = "block";
   leftRightDiv.style.display = "none";
@@ -45,7 +54,7 @@ topBottomImg.onclick = function () {
 }
 
 enclosedImg.onclick = function () {
-  modal.style.display = "none";
+  configurationMenu.style.display = "none";
   enclosedMenu();
   enclosedDiv.style.display = "block";
   leftRightDiv.style.display = "none";
@@ -53,12 +62,17 @@ enclosedImg.onclick = function () {
 
 }
 
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == configurationMenu || event.target == radicalMenu || event.target == strokeMenu || event.target == aboutMenu) {
+    configurationMenu.style.display = "none";
+    radicalMenu.style.display = "none";
+    strokeMenu.style.display = "none";
+    aboutMenu.style.display = "none";
   }
 }
+
 
 
 ////
@@ -91,38 +105,15 @@ function filterRadStrokes(btnStroke) {
       document.querySelector('#character-population').append(singleChar)
       console.log(singleChar.classList)
 
-      singleChar.addEventListener("click", () => {
-        console.log(singleChar.innerText)
-        let charInfo = document.querySelector('#character-info')
-        charInfo.innerHTML = " "
-        let charName = document.createElement('p')
-        charName.innerText = currentRadicalNum.data[character].string
-        charInfo.append(charName)
-        console.log(currentRadicalNum.data[character].string, "currentRadicalNum.data[character].string")
-        console.log(charName, "charName")
-        let charMand = document.createElement('p')
-        charMand.innerText = currentRadicalNum.data[character].kmandarin
-        charInfo.append(charMand)
-        console.log("currentRadicalNum.data[character].kmandarin", currentRadicalNum.data[character].kmandarin)
-        let charEng = document.createElement('p')
-        charEng.innerText = currentRadicalNum.data[character].kdefinition
-        charInfo.append(charEng)
-        console.log("currentRadicalNum.data[character].kdefinition", currentRadicalNum.data[character].kdefinition)
-        console.log(currentRadicalNum.data[character].kdefinition)
-
-      })
-
-
 
     }
-    // } else {
-    //   document.querySelector('#character-population').innerHTML = " "
-    // }
-
-
-
   }
+
+
+
+
 }
+
 
 
 ////////
@@ -198,7 +189,7 @@ let topBottomMenu = async () => {
       topBottomList.push(response.data[topBottom[i]].string)
       // console.log(topBottomList)
       let option = document.createElement('option')
-      option.value = `${response.data[leftRight[i]].radical}`
+      option.value = `${response.data[topBottom[i]].radical}`
       option.text = `${response.data[topBottom[i]].string}`
       selectRadical.append(option)
 
