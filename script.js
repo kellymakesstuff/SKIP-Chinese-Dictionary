@@ -91,34 +91,59 @@ for (let i = 0; i < btns.length; i++) {
   })
 }
 
+//////
+
 function filterRadStrokes(btnStroke) {
-  document.querySelector('#character-population').innerHTML = " "
-  console.log(currentRadicalNum)
-  for (character in currentRadicalNum.data) {
-    console.log("line 83", character, currentRadicalNum.data[character])
-    if (currentRadicalNum.data[character].ktotalstrokes === btnStroke) {
-      console.log("line 85", currentRadicalNum.data[character].string)
-      let singleChar = document.createElement('p')
-      singleChar.innerText = currentRadicalNum.data[character].string
-      singleChar.classList = currentRadicalNum.data[character].ktotalstrokes
+  document.querySelector("#character-population").innerHTML = " "
+
+  console.log(btnStroke, currentRadicalNum)
+  let curr = currentRadicalNum.data
+  for (character in curr) {
+    // console.log(currentRadicalNum.data[character].string)
+    if (curr[character].ktotalstrokes === btnStroke) {
+      let singleChar = document.createElement("p")
+      singleChar.innerText = curr[character].string
+      singleChar.classList = curr[character].ktotalstrokes
+
       singleChar.classList += " listed-char"
-      document.querySelector('#character-population').append(singleChar)
-      console.log(singleChar.classList)
-
-
+      singleChar.value = character
+      document.querySelector("#character-population").append(singleChar)
     }
   }
+  const listedChars = document.querySelectorAll(".listed-char")
+  const charInfo = document.getElementById('character-info')
 
+  listedChars.forEach(char => {
+    console.log(char)
+    char.addEventListener('click', e => {
+      charInfo.innerHTML = " "
+      console.log(e.target.innerText, currentRadicalNum.data)
+      currentRadicalNum.data.forEach(single => {
+        if (single.string === e.target.innerText) {
+          console.log(e.target.innerText, single.string)
+          console.log(single.string, single.kmandarin)
 
+          let charName = document.createElement("p")
+          charName.innerText = single.string
+          charInfo.append(charName)
+          let charStrokes = document.createElement("p")
+          charStrokes.innerText = `Stroke Count: ${single.ktotalstrokes}`
+          charInfo.append(charStrokes)
+          let charMand = document.createElement("p")
+          charMand.innerText = `Mandarin: ${single.kmandarin}`
+          charInfo.append(charMand)
+          let charEng = document.createElement("p")
+          charEng.innerText = `English: ${single.kdefinition}`
+          charInfo.append(charEng)
+        }
+      })
 
-
+    })
+  })
 }
 
 
-
-////////
-
-
+///////
 
 let currentRadicalNum = { radicalNum: 0, data: [] }
 
