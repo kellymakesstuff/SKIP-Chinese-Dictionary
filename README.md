@@ -4,7 +4,9 @@
 
 ## SKIP Chinese Dictionary
 
-https://git.generalassemb.ly/bergkma/skip-chinese.git
+https://skip-chinese.netlify.app/ 
+
+**Current load issue: HTTP-only API not accepted by deploy (App will be re-uploaded after API fix.)
 
 ## Project Description
 
