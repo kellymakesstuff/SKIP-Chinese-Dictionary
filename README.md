@@ -17,7 +17,7 @@ The SKIP method was developed by linguistic rock star Jack Halpern of the ![Kanj
 
 ## API and Data Sample
 
-![Chinese Character Web API](http://ccdb.hemiola.com/)
+[Chinese Character Web API](http://ccdb.hemiola.com/)
 
 The Chinese Character Web API is an API built from the [Unihan Database](http://www.unicode.org/reports/tr38/#N10260), which is the comprehensive database of Chinese, Japanese, Korean, and Vietnamese language information and character sets as put out by the Unicode Consortium. 
 
