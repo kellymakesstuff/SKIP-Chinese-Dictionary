@@ -4,9 +4,8 @@
 
 ## SKIP Chinese Dictionary
 
-https://skip-chinese.netlify.app/ 
+https://skip-chinese.surge.sh 
 
-**Current load issue: HTTP-only API not accepted by deploy (App will be re-uploaded after API fix.)
 
 ## Project Description
 
